@@ -1,0 +1,68 @@
+export const ROLES = {
+  ADMIN: "admin",
+  MR: "mr",
+  DOCTOR: "doctor"
+};
+
+export const PERMISSIONS = {
+  CREATE_DOCTOR: "create_doctor",
+  DELETE_DOCTOR: "delete_doctor",
+  VIEW_DOCTOR: "view_doctor",
+
+  CREATE_VISIT: "create_visit",
+  VIEW_REPORT: "view_report",
+  CREATE_DCR: "create_dcr",
+  APPROVE_DCR: "approve_dcr",
+
+  CREATE_MR: "create_mr",
+  CREATE_PRODUCT: "create_product",
+  VIEW_PRODUCT: "view_product",
+  ASSIGN_DOCTOR: "assign_doctor",
+  CREATE_TERRITORY: "create_territory",
+  VIEW_TERRITORY: "view_territory",
+  ASSIGN_TERRITORY: "assign_territory",
+  VIEW_VISIT: "view_visit",
+  VIEW_DCR: "view_dcr",
+  SUBMIT_DCR: "submit_dcr",
+};
+
+export const ROLE_PERMISSIONS = {
+  admin: [
+    PERMISSIONS.CREATE_DOCTOR,
+    PERMISSIONS.DELETE_DOCTOR,
+    PERMISSIONS.VIEW_DOCTOR,
+    PERMISSIONS.CREATE_PRODUCT,
+    PERMISSIONS.VIEW_PRODUCT,
+    PERMISSIONS.VIEW_REPORT,
+    PERMISSIONS.VIEW_VISIT,
+
+
+    /* NEW */
+    PERMISSIONS.CREATE_MR,
+    PERMISSIONS.CREATE_TERRITORY,
+    PERMISSIONS.VIEW_TERRITORY,
+    PERMISSIONS.ASSIGN_TERRITORY,
+    PERMISSIONS.ASSIGN_DOCTOR,
+    PERMISSIONS.CREATE_VISIT,
+    PERMISSIONS.APPROVE_DCR,
+    PERMISSIONS.VIEW_DCR,
+    PERMISSIONS.APPROVE_DCR,
+
+  ],
+
+  mr: [
+    PERMISSIONS.VIEW_DOCTOR,
+    PERMISSIONS.CREATE_VISIT,
+    PERMISSIONS.VIEW_TERRITORY,
+    PERMISSIONS.CREATE_DCR,
+    PERMISSIONS.VIEW_PRODUCT,
+    PERMISSIONS.VIEW_REPORT,
+    PERMISSIONS.VIEW_VISIT,
+    PERMISSIONS.VIEW_DCR,
+    PERMISSIONS.SUBMIT_DCR,
+  ],
+
+  doctor: [
+    PERMISSIONS.VIEW_DOCTOR
+  ]
+};
